@@ -1,0 +1,139 @@
+//card
+body {
+	background-color: hsl(30, 38%, 92%);
+	height: 100%;
+}
+.wrapper {
+	width: 90%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	min-height: 100%;
+	.main {
+		margin: 15px 0;
+		flex: 1 1 auto;
+	}
+}
+.main-card {
+	border-radius: 10px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+.image .item {
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+.image {
+	height: 300px;
+	border-radius: 10px 10px 0 0;
+	background: url("../images/image-product-mobile.jpg");
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.item {
+	display: block;
+	width: 80%;
+	margin: 10px auto;
+	.article {
+		font-size: 14px;
+		font-family: "Montserrat", sans-serif;
+		margin-top: 10px;
+		color: hsl(228, 12%, 48%);
+		letter-spacing: 3px;
+	}
+	.title {
+		font-size: 30px;
+		font-family: "Fraunces", sans-serif;
+		margin-top: 10px;
+		font-weight: 700;
+		line-height: 32px;
+	}
+	.description {
+		font-family: sans-serif;
+		font-family: "Montserrat", sans-serif;
+		font-size: 14px;
+		margin-top: 10px;
+		color: hsl(228, 12%, 48%);
+	}
+	.prices {
+		margin-top: 20px;
+		display: flex;
+		.actual-price {
+			font-size: 30px;
+			font-weight: 700;
+			display: block;
+			color: hsl(158, 36%, 37%);
+			font-family: "Fraunces", sans-serif;
+		}
+		.previous-price {
+			color: hsl(228, 12%, 48%);
+			display: block;
+			margin: auto 0 auto 20px;
+			font-size: 14px;
+			text-decoration: line-through;
+			font-family: "Montserrat", sans-serif;
+		}
+	}
+	button {
+		margin: 15px auto;
+		display: block;
+		width: 100%;
+		background-color: hsl(158, 36%, 37%);
+		font-family: "Montserrat", sans-serif;
+		color: #fff;
+		padding: 10px 0;
+		border-radius: 10px;
+	}
+}
+
+//footer
+.attribution {
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
+	text-align: center;
+	a {
+		color: hsl(208, 100%, 31%);
+		text-decoration: none;
+	}
+	a:visited {
+		color: hsl(208, 100%, 31%);
+	}
+	flex: 0 0 auto;
+}
+
+@media (min-width: 650px) {
+	.wrapper {
+		width: 600px;
+
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		.main {
+			margin: 150px 0;
+		}
+	}
+	.main-card {
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+	.item {
+		display: block;
+		width: 50%;
+		padding: 0 20px;
+	}
+	.image {
+		flex: 1 1 auto;
+		display: block;
+		width: 50%;
+		border-radius: 10px 0 0 10px;
+		background: url("../images/image-product-desktop.jpg");
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: auto;
+	}
+}
